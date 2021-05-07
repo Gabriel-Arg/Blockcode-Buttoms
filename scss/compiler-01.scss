@@ -5,7 +5,7 @@ body {
     margin: 0;
 
     .wraper {
-        // border: 1px solid red;
+        border: 1px solid red;
     
         header {
             // border: 1px solid blue;
@@ -27,5 +27,14 @@ body {
                 text-shadow: 2px 2px 5px black;
             }
         }
+    }
+
+    .conten-01 {
+        background-color: rgba(255, 0, 0, 0.248);
+        padding: 20px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
     }
 }

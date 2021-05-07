@@ -5,6 +5,9 @@ h1 {
 body {
   margin: 0;
 }
+body .wraper {
+  border: 1px solid red;
+}
 body .wraper header {
   height: 300px;
   background-image: url(/img/lego-background-2.jpg);
@@ -20,6 +23,14 @@ body .wraper header h1 {
   font-family: monospace;
   color: white;
   text-shadow: 2px 2px 5px black;
+}
+body .conten-01 {
+  background-color: rgba(255, 0, 0, 0.248);
+  padding: 20px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 /*# sourceMappingURL=style-01.css.map */
