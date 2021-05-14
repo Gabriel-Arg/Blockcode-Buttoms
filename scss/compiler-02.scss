@@ -1,3 +1,89 @@
-.btn-02 {
-    background-color: red;
+.switcher {
+    // border: 1px solid red;
+    position: relative;
+    height: 56px;
+
+    input {
+        appearance: none;
+        position: relative;
+        width: 200px;
+        height: 50px;
+        border-radius: 25px;
+        outline: none;
+        cursor: pointer;
+        font-family: monospace;
+        font-weight: bold;
+        box-shadow: 1px 6px 11px #000000;
+    }
+    input:before,
+    input:after {
+        z-index: 2;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #111;
+    }
+    input:before {
+        content: "On";
+        left: 40px;
+    }
+    input:after {
+        content: "Off";
+        right: 40px;
+    }
+
+    label {
+        z-index: 1;
+        position: absolute;
+        top: 10px;
+        bottom: 10px;
+        border-radius: 20px;
+    }
+
+    input {
+        transition: 0.25s -0.1s;
+    }
+    input:checked {
+        background-color: white;
+    }
+    input:checked:before {
+        color: #111;
+        transition: color 0.5s 0.2s;
+    }
+    input:checked:after {
+        color: #111;
+        transition: color 0.5s;
+    }
+
+    input:checked+label {
+        left: 10px;
+        right: 100px;
+        background-color: #d2ab21;
+        transition: left 0.5s, right 0.4s 0.2s;
+    }
+
+    input:not(:checked) {
+        background: #d2ab21;
+        transition: background 0.5s -0.1s;
+    }
+    input:not(:checked):before {
+        color: #111;
+        transition: color 0.5s;
+    }
+    input:not(:checked):after {
+        color: #1e1e1e;
+        transition: color 0.5s 0.2s;
+    }
+
+    input:not(:checked)+label {
+        left: 100px;
+        right: 10px;
+        background: white;
+        transition: left 0.4s 0.2s, right 0.5s, background 0.35s -0.1s;
+        
+    }
+}
+
+.tarjeta-02 {
+    margin: 200px 0px 200px;
 }
